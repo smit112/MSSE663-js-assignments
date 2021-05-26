@@ -1,10 +1,8 @@
 // #1 Take an array of numbers and make them strings
-let a=[2,5,100];
-let arr=a.tostring;
-
+var arr=[2,5,10]
 function stringItUp(arr) {
 	 
-return arr;
+return arr.map(String);
 	
 	
 }
@@ -46,8 +44,7 @@ console.log(
 // #3 Filter the output array from #2.
 function oldOnesOnly(arr) {
 
-	//for some reason i am still not able to get this one
-	// i tried for, if i might not be rhinking in the right direction.
+	return arr.filter(i=>i.age>16).map(i=>i.age);
  }
 	
 	
