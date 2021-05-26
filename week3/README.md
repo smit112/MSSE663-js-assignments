@@ -16,7 +16,6 @@
 - all properties should be typed.
 - one method should return boolean.
 - one method should return an array of items of a custom type.
-
 2 Create a class that implements that interface.
 
 3 Make a new instance of your class that calls your methods and outputs a result.
