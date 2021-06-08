@@ -59,13 +59,11 @@ exports.update = {
     id: 1,
     task: 'Do the other thing... again'
 };
-/*export const originalUpdates = data.map(task => {
-  if (task.id === update.id) {
-    return Object.assign(task, update);
-  }
-  return (task);
-
-});*/
+exports.originalUpdates = exports.data.map(function (task) {
+    if (task.id == exports.update.id) {
+        return Object.assign(task, exports.update);
+    }
+    return (task);
+});
 // refactor here
-exports.originalUpdates = { id: 1, task: __assign({}, exports.update) };
 console.log(exports.originalUpdates);
