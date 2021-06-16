@@ -8,16 +8,10 @@
  * - Then Hoist the callback function.
  *
  */
-const things = ['thing1', 'thing2'];
-
-
+var things = ['thing1', 'thing2'];
 // create callback here
-
-
 // create map here
-things.map((together) =>{[things]});
-console.log(things);
-
+things.map(function (together) { [things]; });
 /**
  * #2 Higher order then curry.
  *
@@ -25,5 +19,4 @@ console.log(things);
  * - Filter the results from #1 to return a single `thing` object.
  * - Hoist that filter callback and curry all functions.
  */
-
 // create function here

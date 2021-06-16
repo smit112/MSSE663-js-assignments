@@ -1,20 +1,32 @@
+
 // #1 Convert this javascript function to a curried function
-function curryMe(string1, string2, string3): string {
-  return string1 + ' ' + string2 + ' ' + string3;
+/*function curryMe(string1: string, string2: string, string3: string){
+  return (string1 + ' ' + string2 + ' ' + string3);
 }
 
 // source code here
+console.log(curryMe((String)(String)(String));*/
+
+import { sum } from "lodash";
+
+
 
 // #2 Hoist and convert nested functions to curried functions
-function doMath(a) {
-  return function add(b) {
-    return function subtract(c) {
-      return a + b - c;
+ function doMath(a:any) {
+  return function add(b: any) {
+    return function subtract(c: number) {
+      return doMath(a + b - c);
     };
   };
-}
+ }
 
-// source code here
+//source code here
+ //function sum(a:any, b:any, c:number){
+   //return a + b- c;
+ //};
+ let curriedSum = doMath(sum);
+ console.log(curriedSum(1)(2)(1));
+
 
 // #3 Write a curried function that returns an array containing the ninjas who have a black belt
 const ninjasOne = [
@@ -32,6 +44,7 @@ const ninjasOne = [
   { name: 'Wong Fei-hung', belt: 'green' }
 ];
 
+
 const ninjasTwo = [
   { name: 'Michelangelo', belt: 'white' },
   { name: 'Donatello', belt: 'green' },
@@ -41,7 +54,14 @@ const ninjasTwo = [
 ];
 
 // source code here
-
+function ninjas(name: string, belt: string)
+{ 
+  if(belt =='black'){
+    return name;
+  }
+  return ninjas;
+}
+console.log(ninjas);
 /**
  * #4 Write a curried function that returns a new array of ninja objects with "status" added to each object.
  * The status should be the value of whatever key in the status object matches the ninja's belt.
@@ -49,7 +69,7 @@ const ninjasTwo = [
  * @example { name: 'Colt', belt: 'green', status: 'warrior' }
  */
 
-const statusTypes = {
+/*const statusTypes = {
   white: 'grasshopper',
   green: 'warrior',
   black: 'sensei'
@@ -61,4 +81,7 @@ const gamerStatusTypes = {
   black: 'Legend'
 };
 
+
+
 // source code here
+*/
