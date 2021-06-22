@@ -25,7 +25,7 @@ export class TodoService {
   updateTodo(todoData: Todo): Promise<Todo> {
     return this.http.put(this.baseUrl + '/api/todos/' + todoData.id, todoData)
       .toPromise()
-      .then(response => response.json() as Todo)
+      .then((response: { json: () => Todo; }) => response.json() as Todo)
       .catch(this.handleError);
   }
 
