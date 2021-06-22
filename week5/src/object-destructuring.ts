@@ -32,7 +32,7 @@ console.log(id); // 1
 // #4 Create a new object given the destructed values above
 
 // reconstruct here
-export const info= {user: 'elvis', address:{ city: 'denver', state: 'colorado' }, id:1}
+export const info= {user: 'elvis', address:{ city: 'denver', state: 'colorado' }, id:1};
 
 console.log(info);
 

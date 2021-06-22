@@ -25,7 +25,7 @@ export class Max implements Bob{
     this.job=job;
 }   
 getJob():string{
-    return this.name;
+    return (this.name);
 }
 getAge():number{
     return this.age;
@@ -38,6 +38,7 @@ getJobStatus():boolean{
     return false;
 
 }
+
 
 }
     

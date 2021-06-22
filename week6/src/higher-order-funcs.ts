@@ -14,9 +14,9 @@ const things = ['thing1', 'thing2'];
 // create callback here
 
 
+
 // create map here
-things.map((together) =>{[things]});
-console.log(things);
+
 
 /**
  * #2 Higher order then curry.

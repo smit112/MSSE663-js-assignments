@@ -1,11 +1,11 @@
 
 // #1 Convert this javascript function to a curried function
-/*function curryMe(string1: string, string2: string, string3: string){
+function curryMe(string1: string, string2: string, string3: string){
   return (string1 + ' ' + string2 + ' ' + string3);
 }
 
 // source code here
-console.log(curryMe((String)(String)(String));*/
+console.log(curryMe((String)(String)(String));
 
 import { sum } from "lodash";
 
@@ -54,7 +54,7 @@ const ninjasTwo = [
 ];
 
 // source code here
-function ninjas(name: string, belt: string)
+function ninjas(ninjasOne{name:String, belt:String}, ninjasTwo{name:String, belt:String}) 
 { 
   if(belt =='black'){
     return name;
