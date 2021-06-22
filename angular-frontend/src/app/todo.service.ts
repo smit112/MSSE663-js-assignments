@@ -18,7 +18,7 @@ export class TodoService {
 
   createTodo(todoData: Todo): Promise<Todo> {
     return this.http.post(this.baseUrl + '/api/todos/', todoData)
-      .toPromise().then(response => response.json() as Todo)
+      .toPromise().then((response: { json: () => Todo; }) => response.json() as Todo)
       .catch(this.handleError);
   }
 
