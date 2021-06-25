@@ -9,3 +9,5 @@ cities.map(c => "Holy "+ c)
 of(cities).pipe(
     map(dataArray => dataArray.join(", "))
 ).subscribe(res => console.log(res)); 
+
+console.log(cities);
