@@ -15,8 +15,10 @@ const things = ['thing1', 'thing2'];
 
 
 
-// create map here
 
+// create map here
+things.map(things=> {[{ id: 1}, { name: 'thing'}]},
+things.map(things=> {[{ id: 2}, { name: 'thing'}]}
 
 /**
  * #2 Higher order then curry.
@@ -27,3 +29,9 @@ const things = ['thing1', 'thing2'];
  */
 
 // create function here
+function multiplyBy(str: string) {
+    return function(str2: string) {
+      return ;
+    }
+  }
+  const peopleAbove18 = (collection) => {  return collection    .filter((person) => person.age >= 18);}

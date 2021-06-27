@@ -1,55 +1,66 @@
-"use strict";
+//import { sum } from "lodash";
 // #1 Convert this javascript function to a curried function
-/*function curryMe(string1: string, string2: string, string3: string){
-  return (string1 + ' ' + string2 + ' ' + string3);
-}
-
+//function curryMe(string1: string, string2: string, string3: string){
+//return (string1 + ' ' + string2 + ' ' + string3);
+//};
 // source code here
-console.log(curryMe((String)(String)(String));*/
-exports.__esModule = true;
-var lodash_1 = require("lodash");
-// #2 Hoist and convert nested functions to curried functions
-function doMath(a) {
-    return function add(b) {
-        return function subtract(c) {
-            return doMath(a + b - c);
+function curryMe(string1) {
+    return function (string2) {
+        return function (string3) {
+            return (string1 + ' ' + string2 + ' ' + string3);
         };
     };
 }
-//source code here
-//function sum(a:any, b:any, c:number){
-//return a + b- c;
+console.log(curryMe("M")("Having")("Curry"));
+// #2 Hoist and convert nested functions to curried functions
+//function doMath(a:any) {
+//return function add(b: any) {
+//return function subtract(c: number) {
+//return doMath(a + b - c);
 //};
-var curriedSum = doMath(lodash_1.sum);
-console.log(curriedSum(1)(2)(1));
-// #3 Write a curried function that returns an array containing the ninjas who have a black belt
-var ninjasOne = [
-    { name: 'Michelangelo', belt: 'white' },
-    { name: 'Donatello', belt: 'green' },
-    { name: 'Raphael', belt: 'black' },
-    { name: 'Leonardo', belt: 'black' },
-    { name: 'Mr. Miyagi', belt: 'black' },
-    { name: 'Rocky', belt: 'black' },
-    { name: 'Colt', belt: 'green' },
-    { name: 'Tum Tum', belt: 'white' },
-    { name: 'Haru', belt: 'white' },
-    { name: 'The Bride', belt: 'black' },
-    { name: 'Cammy', belt: 'black' },
-    { name: 'Wong Fei-hung', belt: 'green' }
+//};
+//}
+//source code here
+console.log(doMath(2)(1)(1));
+function doMath(a) {
+    return function (b) {
+        return function (c) {
+            return (a + b - c);
+        };
+    };
+}
+/* #3 Write a curried function that returns an array containing the ninjas who have a black belt
+const ninjasOne = [
+  { name: 'Michelangelo', belt: 'white' },
+  { name: 'Donatello', belt: 'green' },
+  { name: 'Raphael', belt: 'black' },
+  { name: 'Leonardo', belt: 'black' },
+  { name: 'Mr. Miyagi', belt: 'black' },
+  { name: 'Rocky', belt: 'black' },
+  { name: 'Colt', belt: 'green' },
+  { name: 'Tum Tum', belt: 'white' },
+  { name: 'Haru', belt: 'white' },
+  { name: 'The Bride', belt: 'black' },
+  { name: 'Cammy', belt: 'black' },
+  { name: 'Wong Fei-hung', belt: 'green' }
 ];
-var ninjasTwo = [
-    { name: 'Michelangelo', belt: 'white' },
-    { name: 'Donatello', belt: 'green' },
-    { name: 'Raphael', belt: 'black' },
-    { name: 'Jim', belt: 'black' },
-    { name: 'The Rat', belt: 'black' }
+
+
+const ninjasTwo = [
+  { name: 'Michelangelo', belt: 'white' },
+  { name: 'Donatello', belt: 'green' },
+  { name: 'Raphael', belt: 'black' },
+  { name: 'Jim', belt: 'black' },
+  { name: 'The Rat', belt: 'black' }
 ];
+
 // source code here
-function ninjas(name, belt) {
-    if (belt == 'black') {
-        return name;
-    }
-    return ninjas;
+function ninjas(ninjasOne{name:String, belt:String}, ninjasTwo{name:String, belt:String})
+{
+  if(belt =='black'){
+    return name;
+  }
+  return ninjas;
 }
 console.log(ninjas);
 /**
@@ -73,4 +84,4 @@ const gamerStatusTypes = {
 
 
 // source code here
-*/ 
+*/
