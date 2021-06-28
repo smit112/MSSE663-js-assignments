@@ -70,10 +70,6 @@ const ninjasTwo = [
 
 
 // source code here
-let blackbelt = (high: any) => ((belt: any) =>( belt==='black'));
-let gt4= blackbelt('black');
-let result= ninjasOne.filter(gt4);
-
 
 
 /**
