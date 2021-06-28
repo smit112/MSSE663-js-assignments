@@ -10,13 +10,13 @@ console.log(originalNumbers);
 
 // #2 Combining arrays
 export const winners = ['first'];
-export const runnerUps = ['second', 'third', 'fourth', 'fifth'];
+//export const runnerUps = ['second', 'third', 'fourth', 'fifth'];
 
 
 // refactor here
-export const competitors  = [...winners,...runnerUps];
+export const runnerUps = [...winners,'second', 'third', 'fourth', 'fifth'];
 
-console.log(competitors);
+console.log(runnerUps);
 
 // #3 Combining objects
 export const bob = {

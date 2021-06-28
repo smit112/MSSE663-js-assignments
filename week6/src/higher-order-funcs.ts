@@ -29,10 +29,9 @@ things.map(things=> {[{ id: 2}, { name: 'thing'}]}
  */
 
 // create function here
-/*function multiplyBy(str: string) {
+function multiplyBy(str: string) {
     return function(str2: string) {
       return ;
     }
   }
   const peopleAbove18 = (collection) => {  return collection    .filter((person) => person.age >= 18);}
-  */
